@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人网页 / Personal Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #add8e6; /* 浅蓝色背景 */
+      color: white;
+      padding: 10px 20px;  /* 缩小上下内边距 */
+      text-align: center;
+      max-width: 80%; /* 限制宽度为屏幕的 80% */
+      margin: 0 auto; /* 居中对齐 */
+    }
+    section {
+      padding: 20px;
+      max-width: 80%; /* 限制正文部分宽度 */
+      margin: 0 auto; /* 居中显示 */
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+    a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .content {
+      margin-top: 30px;
+    }
+    .lang { display: none; }
+    .lang.active { display: block; }
+    .lang-switch { margin-bottom: 20px; }
+    .lang-switch button { margin-right:10px; padding:5px 10px; }
+    ul { margin-top: 0; }
+    .experience li { margin-bottom: 10px; }
+    .profile-pic {
+      display: block;
+      margin: 10px auto;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>郭子棋的个人网页 / Personal Website of Ziqi Guo</h1>
+    <p>切换语言 / Switch Language</p>
+    <div class="lang-switch">
+      <button onclick="switchLang('cn')">中文</button>
+      <button onclick="switchLang('en')">English</button>
+    </div>
+    <img src="profile.jpg" alt="Ziqi Guo" class="profile-pic">
+  </header>
+
+  <section class="content">
+    <!-- 中文 -->
+    <div class="lang cn active">
+      <h2>关于我</h2>
+      <p>
+        我是北京大学数学系的博士生，研究方向为算数代数几何，具体涉及L函数、志村簇和Arakelov几何等领域。
+      </p>
+
+      <h2>研究兴趣</h2>
+      <ul>
+        <li>
+          L函数与志村簇，尤其是志村簇的整模型、志村簇上的生成序列及其算数推广。
+        </li>
+        <li>
+          Arakelov几何，主要研究算术特殊除子和线丛的算数相交数等问题。
+        </li>
+      </ul>
+
+      <h2>经历</h2>
+      <ul class="experience">
+        <li>2018–2022：北京大学，数学学士</li>
+        <li>2022–至今：北京大学，数学博士（在读），导师：袁新意教授</li>
+      </ul>
+
+      <h2>研究论文</h2>
+      <ul>
+        <li>
+          <a href="https://arxiv.org/abs/2308.06682" target="_blank">
+            《Explicit Kodaira-Spencer map over Hilbert modular varieties》
+          </a>
+          <br>被京都数学杂志（Kyoto Journal of Mathematics）接受
+        </li>
+        <li>
+          <a href="https://arxiv.org/abs/2509.24363" target="_blank">
+            《Modular Heights of Unitary Shimura Varieties》
+          </a>
+        </li>
+      </ul>
+
+      <h2>联系我</h2>
+      <p>Email: <a href="mailto:ziqiguo0603@pku.edu.cn">ziqiguo0603@pku.edu.cn</a></p>
+      <p>GitHub: <a href="https://github.com/Nevin0603" target="_blank">Nevin0603</a></p>
+    </div>
+
+    <!-- English -->
+    <div class="lang en">
+      <h2>About Me</h2>
+      <p>
+        I am a PhD student in Mathematics at Peking University, working in arithmetic algebraic geometry,
+        with a particular focus on L-functions, Shimura varieties, and Arakelov geometry.
+      </p>
+
+      <h2>Research Interests</h2>
+      <ul>
+        <li>
+          L-functions and Shimura varieties, with an emphasis on integral models of Shimura varieties, generating series on Shimura varieties, and their arithmetic generalizations.
+        </li>
+        <li>
+          Arakelov geometry, particularly in the study of arithmetic intersection numbers of special cycles and line bundles.
+        </li>
+      </ul>
+
+      <h2>Experience</h2>
+      <ul class="experience">
+        <li>2018–2022: Bachelor in Mathematics, Peking University</li>
+        <li>2022–Present: PhD in Mathematics, Peking University (ongoing), Advisor: Prof. Xinyi Yuan</li>
+      </ul>
+
+      <h2>Research Papers</h2>
+      <ul>
+        <li>
+          <a href="https://arxiv.org/abs/2308.06682" target="_blank">
+            "Explicit Kodaira-Spencer map over Hilbert modular varieties"
+          </a>
+          <br>Accepted by the Kyoto Journal of Mathematics
+        </li>
+        <li>
+          <a href="https://arxiv.org/abs/2509.24363" target="_blank">
+            "Modular Heights of Unitary Shimura Varieties"
+          </a>
+        </li>
+      </ul>
+
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:ziqiguo0603@pku.edu.cn">ziqiguo0603@pku.edu.cn</a></p>
+      <p>GitHub: <a href="https://github.com/Nevin0603" target="_blank">Nevin0603</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Ziqi Guo</p>
+  </footer>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang').forEach(div => div.classList.remove('active'));
+      document.querySelector('.' + lang).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
